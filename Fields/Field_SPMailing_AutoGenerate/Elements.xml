@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Boolean" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_AutoGenerate_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_AutoGenerate_Description;"
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         Group="SPMailing" 
+         ID="{651ED2BD-485A-4B33-8F3B-B024722A2E5C}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_AutoGenerate" 
+         Name="SPMailing_AutoGenerate" 
+         Customization="" >
+    <Default>0</Default>
+  </Field>
+</Elements>

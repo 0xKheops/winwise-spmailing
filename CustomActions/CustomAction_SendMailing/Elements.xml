@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="SPMailing_SendMailing"
+                ImageUrl="/_layouts/images/REFRESH.GIF"
+                Location="CommandUI.Ribbon.DisplayForm"
+                RegistrationId="10005"
+                RegistrationType="List"
+                RequireSiteAdministrator="false"
+                Rights="ApproveItems">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Tabs._children">
+          <Tab
+            Id="Ribbon.SPMailing"
+            Title="$Resources:Winwise.SPMailing,Ribbon_Mailing_Tab_Title;"
+            Description="$Resources:Winwise.SPMailing,Ribbon_Mailing_Tab_Description;"
+            Sequence="501">
+            <Scaling
+              Id="Ribbon.SPMailing.Scaling">
+              <MaxSize
+                Id="Ribbon.SPMailing.MaxSize"
+                GroupId="Ribbon.SPMailing.Send"
+                Size="OneLargeTwoMedium"/>
+              <Scale
+                Id="Ribbon.SPMailing.Scaling.CustomTabScaling"
+                GroupId="Ribbon.SPMailing.Send"
+                Size="OneLargeTwoMedium" />
+            </Scaling>
+            <Groups Id="Ribbon.SPMailing.Groups">
+              <Group
+                Id="Ribbon.SPMailing.Send"
+                Description="$Resources:Winwise.SPMailing,Ribbon_Mailing_Group_Description;"
+                Title="$Resources:Winwise.SPMailing,Ribbon_Mailing_Group_Title;"
+                Sequence="52"
+                Template="Ribbon.Templates.CustomTemplateExample">
+                <Controls Id="Ribbon.SPMailing.Send.Controls">
+                  <Button
+                    Id="Ribbon.SPMailing.Send.SendForReal"
+                    Command="Ribbon.SPMailing.Send.SendCommand"
+                    Sequence="15"
+                    LabelText="$Resources:Winwise.SPMailing,Ribbon_Mailing_Button_Send_Title;"
+                    ToolTipDescription="$Resources:Winwise.SPMailing,Ribbon_Mailing_Button_Send_Description;"
+                    TemplateAlias="cust1" Image32by32="/_layouts/images/centraladmin_systemsettings_email_32x32.png"/>
+                  <Button
+                    Id="Ribbon.SPMailing.Send.SendTest"
+                    Command="Ribbon.SPMailing.Send.SendTestCommand"
+                    Sequence="15"
+                    ToolTipDescription="$Resources:Winwise.SPMailing,Ribbon_Mailing_Button_Test_Description;"
+                    LabelText="$Resources:Winwise.SPMailing,Ribbon_Mailing_Button_Test_Title;"
+                    TemplateAlias="cust2" Image32by32="/_layouts/images/centraladmin_monitoring_healthstatus_32x32.png"/>
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
+            <Layout
+              Title="OneLargeTwoMedium"
+              LayoutTitle="OneLargeTwoMedium">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust1" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust2" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Ribbon.SPMailing.Send.SendCommand"
+          CommandAction="{SiteUrl}/_layouts/Winwise.SPMailing/SendMailing.aspx?ListId={ListId}&amp;ID={ItemId}" />
+        <CommandUIHandler
+          Command="Ribbon.SPMailing.Send.SendTestCommand"
+          CommandAction="{SiteUrl}/_layouts/Winwise.SPMailing/SendMailing.aspx?ListId={ListId}&amp;ID={ItemId}&amp;IsTest=true" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

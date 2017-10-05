@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Text" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_Url_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_Url_Description;"
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         MaxLength="255" 
+         Group="SPMailing" 
+         ID="{7270e400-190a-4929-a9b4-047a18c13de8}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_Url" 
+         Name="SPMailing_Url" 
+         Customization=""  />
+</Elements>

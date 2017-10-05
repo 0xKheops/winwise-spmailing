@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContentType_CategoryTemplate_Name" xml:space="preserve">
+    <value>Category template</value>
+  </data>
+  <data name="ContentType_Category_Name" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ContentType_ContactRecipient_Name" xml:space="preserve">
+    <value>Contact recipient</value>
+  </data>
+  <data name="ContentType_MailingDefinition_Name" xml:space="preserve">
+    <value>Mailing definition</value>
+  </data>
+  <data name="ContentType_MailingTemplate_Name" xml:space="preserve">
+    <value>Mailing template</value>
+  </data>
+  <data name="ContentType_Mailing_Name" xml:space="preserve">
+    <value>Mailing</value>
+  </data>
+  <data name="ContentType_RecipientsList_Name" xml:space="preserve">
+    <value>Recipients list</value>
+  </data>
+  <data name="Error_Lookup_PropertyKeyNotFound" xml:space="preserve">
+    <value>Cannot find lookup field : property key {0} does not exist</value>
+  </data>
+  <data name="Feature_Web_Mailings_Description" xml:space="preserve">
+    <value>Extract SharePoint content to generate and send mailings such as newsletters</value>
+  </data>
+  <data name="Feature_Web_Mailings_Title" xml:space="preserve">
+    <value>Winwise - SPMailing</value>
+  </data>
+  <data name="Field_AutoGenerate_Description" xml:space="preserve">
+    <value>If enabled, the mailing definition workflow will automatically generate a mailing every X days, X corresponding to the "DaysOffset filter" field. Use SharePoint alerts on the mailings list to be notified. Mailings won't be sent automatically.
+If enabled, the first mailing will be generated as soon as this item is modified.</value>
+  </data>
+  <data name="Field_AutoGenerate_Title" xml:space="preserve">
+    <value>Automatic generation</value>
+  </data>
+  <data name="Field_Categories_Description" xml:space="preserve">
+    <value>Categories that will be rendered in the mailing</value>
+  </data>
+  <data name="Field_Categories_Title" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Field_CategoryTemplate_Description" xml:space="preserve">
+    <value>XSLT transformation used to render this category</value>
+  </data>
+  <data name="Field_CategoryTemplate_Title" xml:space="preserve">
+    <value>Category Template</value>
+  </data>
+  <data name="Field_ContactRecipients_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_ContactRecipients_Title" xml:space="preserve">
+    <value>Contact Recipients</value>
+  </data>
+  <data name="Field_DaysOffset_Description" xml:space="preserve">
+    <value>When a mailing is generated, categories that use date filters in their query can use this field to filter items that have been modified or created within the X previous days</value>
+  </data>
+  <data name="Field_DaysOffset_Title" xml:space="preserve">
+    <value>DaysOffset filter</value>
+  </data>
+  <data name="Field_Footer_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_Footer_Title" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="Field_From_Adress_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_From_Adress_Title" xml:space="preserve">
+    <value>From (adress)</value>
+  </data>
+  <data name="Field_From_DisplayName_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_From_DisplayName_Title" xml:space="preserve">
+    <value>From (display name)</value>
+  </data>
+  <data name="Field_GenerationUser_Description" xml:space="preserve">
+    <value>Use this field to specify which user account is used to execute content extraction during the mailing generation. Warning : if this field is not set, system account will be used.</value>
+  </data>
+  <data name="Field_GenerationUser_Title" xml:space="preserve">
+    <value>Impersonate User</value>
+  </data>
+  <data name="Field_Header_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_Header_Title" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Field_Label_Description" xml:space="preserve">
+    <value>Represents the display name of the category.It can be used in the category's XSL template</value>
+  </data>
+  <data name="Field_Label_Title" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Field_Log_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_Log_Title" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Field_MailBody_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_MailBody_Title" xml:space="preserve">
+    <value>Mail Body</value>
+  </data>
+  <data name="Field_MailingDefinition_Description" xml:space="preserve">
+    <value>Mailing definition from which this mailing has been generated</value>
+  </data>
+  <data name="Field_MailingDefinition_Title" xml:space="preserve">
+    <value>Mailing Definition</value>
+  </data>
+  <data name="Field_MailingTemplate_Description" xml:space="preserve">
+    <value>HTML template that will be used to render the mailing</value>
+  </data>
+  <data name="Field_MailingTemplate_Title" xml:space="preserve">
+    <value>Mailing Template</value>
+  </data>
+  <data name="Field_MailSubject_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_MailSubject_Title" xml:space="preserve">
+    <value>Mail Subject</value>
+  </data>
+  <data name="Field_PeopleAndGroupsRecipients_Description" xml:space="preserve">
+    <value>SharePoint users and groups targeted by this recipients list</value>
+  </data>
+  <data name="Field_PeopleAndGroupsRecipients_Title" xml:space="preserve">
+    <value>SharePoint Users</value>
+  </data>
+  <data name="Field_Query_Description" xml:space="preserve">
+    <value>CAML Query that will filter items for this category.
+Example : &lt;Where&gt;&lt;Geq&gt;&lt;FieldRef Name="Modified"/&gt;&lt;Value Type="DateTime"&gt;&lt;Today OffsetDays="-[DAYSOFFSET]"/&gt;&lt;/Value&gt;&lt;/Geq&gt;&lt;/Where&gt;&lt;OrderBy&gt;&lt;FieldRef Name="Modified" Ascending='FALSE' /&gt;&lt;/OrderBy&gt;</value>
+  </data>
+  <data name="Field_Query_Title" xml:space="preserve">
+    <value>CAML Query</value>
+  </data>
+  <data name="Field_RecipientsLists_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_RecipientsLists_Title" xml:space="preserve">
+    <value>Recipients Lists</value>
+  </data>
+  <data name="Field_Recipients_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_Recipients_Title" xml:space="preserve">
+    <value>Recipients</value>
+  </data>
+  <data name="Field_ReplyTo_Adress_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_ReplyTo_Adress_Title" xml:space="preserve">
+    <value>ReplyTo (adress)</value>
+  </data>
+  <data name="Field_ReplyTo_DisplayName_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Field_ReplyTo_DisplayName_Title" xml:space="preserve">
+    <value>ReplyTo (display name)</value>
+  </data>
+  <data name="Field_Sent_Description" xml:space="preserve">
+    <value>Indicates if this mailing has been sent. A mailing cannot be sent twice.</value>
+  </data>
+  <data name="Field_Sent_Title" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="Field_Type_Description" xml:space="preserve">
+    <value>Indicates if this category targets a site and all of it's sub sites, or only a single list</value>
+  </data>
+  <data name="Field_Type_Title" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Field_Url_Description" xml:space="preserve">
+    <value>Url of the list or site (depending on the Type field) targeted by the query</value>
+  </data>
+  <data name="Field_Url_Title" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Field_ViewFields_Description" xml:space="preserve">
+    <value>Indicates which fields must be retrieved by the category's query</value>
+  </data>
+  <data name="Field_ViewFields_Title" xml:space="preserve">
+    <value>ViewFields</value>
+  </data>
+  <data name="GenerateMailing_Processing_LeadingHTML" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="GenerateMailing_Processing_TrailingHTML" xml:space="preserve">
+    <value>Mailing generation in progress</value>
+  </data>
+  <data name="ListInstance_Categories_Description" xml:space="preserve">
+    <value>Elements in this list represent SharePoint content extractions that can be included in mailings</value>
+  </data>
+  <data name="ListInstance_Categories_Title" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="ListInstance_CategoryTemplates_Description" xml:space="preserve">
+    <value>This library contains XSL templates used to render categories</value>
+  </data>
+  <data name="ListInstance_CategoryTemplates_Title" xml:space="preserve">
+    <value>Category Templates</value>
+  </data>
+  <data name="ListInstance_ContactRecipients_Description" xml:space="preserve">
+    <value>This contact list's items can be used as recipients in recipients lists</value>
+  </data>
+  <data name="ListInstance_ContactRecipients_Title" xml:space="preserve">
+    <value>Contact Recipients</value>
+  </data>
+  <data name="ListInstance_MailingDefinitions_Description" xml:space="preserve">
+    <value>Elements in this list represent pre-configured mailings. A workflow can be used to automatically generate them every X days, or they can be generated manually</value>
+  </data>
+  <data name="ListInstance_MailingDefinitions_Title" xml:space="preserve">
+    <value>Mailing Definitions</value>
+  </data>
+  <data name="ListInstance_Mailings_Description" xml:space="preserve">
+    <value>Elements in this list are mailings that have been generated from mailing definitions, they can be sent from here. This list can also be used to hand-write mailings and send them.</value>
+  </data>
+  <data name="ListInstance_Mailings_Title" xml:space="preserve">
+    <value>Mailings</value>
+  </data>
+  <data name="ListInstance_MailingTemplates_Description" xml:space="preserve">
+    <value>This library contain html templates used to generate mailings</value>
+  </data>
+  <data name="ListInstance_MailingTemplates_Title" xml:space="preserve">
+    <value>Mailing Templates</value>
+  </data>
+  <data name="ListInstance_RecipientsLists_Description" xml:space="preserve">
+    <value>This list contains reusable lists of recipients used by mailing definitions</value>
+  </data>
+  <data name="ListInstance_RecipientsLists_Title" xml:space="preserve">
+    <value>Recipients Lists</value>
+  </data>
+  <data name="Log_BeginGeneration" xml:space="preserve">
+    <value>Mailing generation</value>
+  </data>
+  <data name="Log_BeginSend" xml:space="preserve">
+    <value>Sending the mailing</value>
+  </data>
+  <data name="Log_Error_CategoryGenerationError" xml:space="preserve">
+    <value>Category "{0}" : An error occured during generation</value>
+  </data>
+  <data name="Log_Error_ListNotFound" xml:space="preserve">
+    <value>Category "{0}" : List {1} could not be found</value>
+  </data>
+  <data name="Log_Error_MailingAlreadySent" xml:space="preserve">
+    <value>This mailing has already been sent. It cannot be sent twice.</value>
+  </data>
+  <data name="Log_Error_NoMailingTemplate" xml:space="preserve">
+    <value>There is no mailing template associated to this mailing definition</value>
+  </data>
+  <data name="Log_Error_QueryError" xml:space="preserve">
+    <value>Category "{0}" : An error occured during execution of the CAML query</value>
+  </data>
+  <data name="Log_Error_SendError" xml:space="preserve">
+    <value>An erreur occured while sending the mailing</value>
+  </data>
+  <data name="Log_Info_EmptyCategory" xml:space="preserve">
+    <value>Category "{0}" : query returned no results</value>
+  </data>
+  <data name="Log_Info_MailingSentTo" xml:space="preserve">
+    <value>Mailing sent to {0}</value>
+  </data>
+  <data name="Log_Warning_ContactHasNoEmail" xml:space="preserve">
+    <value>Contact {0} (ID={1}) has no associated email</value>
+  </data>
+  <data name="Log_Warning_ListFieldNotFound" xml:space="preserve">
+    <value>Category "{0}" : Field "{1}" could not be found or converted to a string</value>
+  </data>
+  <data name="Log_Warning_MailingCouldNotBeSentTo" xml:space="preserve">
+    <value>Impossible to send the mailing to {0}</value>
+  </data>
+  <data name="Log_Warning_UserCannotAccessListItem" xml:space="preserve">
+    <value>Category "{0}" : User {1} cannot access to </value>
+  </data>
+  <data name="Log_Warning_UserHasNoEmail" xml:space="preserve">
+    <value>User {0} has no associated email</value>
+  </data>
+  <data name="Log_Warning_UserNotFound" xml:space="preserve">
+    <value>User {0} could not be found</value>
+  </data>
+  <data name="Ribbon_GenerateMailing_ButtonGenerate_Description" xml:space="preserve">
+    <value>Generates a new mailing from his mailing definition</value>
+  </data>
+  <data name="Ribbon_GenerateMailing_ButtonGenerate_Title" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="Ribbon_GenerateMailing_Group_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_GenerateMailing_Group_Title" xml:space="preserve">
+    <value>Generation</value>
+  </data>
+  <data name="Ribbon_GenerateMailing_Tab_Description" xml:space="preserve">
+    <value>Commands related to SPMailing feature</value>
+  </data>
+  <data name="Ribbon_GenerateMailing_Tab_Title" xml:space="preserve">
+    <value>SPMailing</value>
+  </data>
+  <data name="Ribbon_Mailing_Button_Send_Description" xml:space="preserve">
+    <value>Sends the mailing to all recipients</value>
+  </data>
+  <data name="Ribbon_Mailing_Button_Send_Title" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Ribbon_Mailing_Button_Test_Description" xml:space="preserve">
+    <value>Sends the mailing to current user only</value>
+  </data>
+  <data name="Ribbon_Mailing_Button_Test_Title" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Ribbon_Mailing_Group_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_Mailing_Group_Title" xml:space="preserve">
+    <value>Mailing</value>
+  </data>
+  <data name="Ribbon_Mailing_Tab_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_Mailing_Tab_Title" xml:space="preserve">
+    <value>SPMailing</value>
+  </data>
+  <data name="SendMailing_Processing_LeadingHTML" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="SendMailing_Processing_TrailingHTML" xml:space="preserve">
+    <value>Mailing is beeing sent</value>
+  </data>
+  <data name="WorkflowAssociation_MailingDefinition_Description" xml:space="preserve">
+    <value>Handles automatic generation if specified</value>
+  </data>
+  <data name="WorkflowAssociation_MailingDefinition_Name" xml:space="preserve">
+    <value>Generation</value>
+  </data>
+  <data name="Workflow_Error_DaysOffsetNotSet" xml:space="preserve">
+    <value>Automatic generation is enabled but the days offset filter is not set or lesser than 1</value>
+  </data>
+  <data name="Workflow_HistoryList_Description" xml:space="preserve">
+    <value>Tracks workflow events</value>
+  </data>
+  <data name="Workflow_HistoryList_Title" xml:space="preserve">
+    <value>Workflow History</value>
+  </data>
+  <data name="Workflow_Log_AutomaticGeneration" xml:space="preserve">
+    <value>Generating a new mailing</value>
+  </data>
+  <data name="Workflow_Log_ItemChanged" xml:space="preserve">
+    <value>The mailing definition has been modified, terminating workflow</value>
+  </data>
+  <data name="Workflow_Log_ManualGeneration" xml:space="preserve">
+    <value>The mailing definition is set to manual generation mode</value>
+  </data>
+  <data name="Workflow_Log_Terminating" xml:space="preserve">
+    <value>Workflow terminating</value>
+  </data>
+  <data name="Workflow_Log_WaitForDaysOffset" xml:space="preserve">
+    <value>Waiting for {0} until next generation</value>
+  </data>
+  <data name="Workflow_Log_WorkflowActivated" xml:space="preserve">
+    <value>Workflow started</value>
+  </data>
+  <data name="Workflow_MailingDefinition_Description" xml:space="preserve">
+    <value>Sequential machine workflow that automatically generates mailings every X days if specified in the AutomaticGeneration field</value>
+  </data>
+  <data name="Workflow_MailingDefinition_Name" xml:space="preserve">
+    <value>Mailing generation</value>
+  </data>
+  <data name="Workflow_Outcome_Generating" xml:space="preserve">
+    <value>Generating</value>
+  </data>
+  <data name="Workflow_Outcome_Initializing" xml:space="preserve">
+    <value>Initializing</value>
+  </data>
+  <data name="Workflow_Outcome_Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Workflow_Outcome_Terminating" xml:space="preserve">
+    <value>Terminating</value>
+  </data>
+  <data name="Workflow_Outcome_Waiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Workflow_TaskList_Description" xml:space="preserve">
+    <value>Tracks workflow tasks</value>
+  </data>
+  <data name="Workflow_TaskList_Title" xml:space="preserve">
+    <value>Workflow Tasks</value>
+  </data>
+</root>

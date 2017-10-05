@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86494296-79E1-4B72-B632-14D279A2BBB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Winwise.SPMailing</RootNamespace>
+    <AssemblyName>Winwise.SPMailing</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Upgrade %28CKSDev%29</ActiveDeploymentConfiguration>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Repositories\winwise-spmailing\Backup\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\SPMailingFeatureIds.cs" />
+    <Compile Include="Code\SPMailingFieldIds.cs" />
+    <Compile Include="Code\SPMailingContext.cs" />
+    <Compile Include="Code\SPMailingGenerator.cs" />
+    <Compile Include="Code\SPMailingHelper.cs" />
+    <Compile Include="Code\SPMailingMailMessageDefinition.cs" />
+    <Compile Include="Code\SPMailingResource.cs" />
+    <Compile Include="Code\SPMailingSender.cs" />
+    <Compile Include="Code\SPMailingWorkflowIds.cs" />
+    <Compile Include="Features\Web_Mailings\Web_Mailings.EventReceiver.cs">
+      <DependentUpon>Web_Mailings.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Web_Mailings_Dependencies\Web_Mailings_Dependencies.EventReceiver.cs">
+      <DependentUpon>Web_Mailings_Dependencies.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Winwise.SPMailing\GenerateMailing.aspx.cs">
+      <DependentUpon>GenerateMailing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Winwise.SPMailing\GenerateMailing.aspx.designer.cs">
+      <DependentUpon>GenerateMailing.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Winwise.SPMailing\SendMailing.aspx.cs">
+      <DependentUpon>SendMailing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Winwise.SPMailing\SendMailing.aspx.designer.cs">
+      <DependentUpon>SendMailing.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Winwise.SPMailing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Winwise.SPMailing.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflows\Workflow_MailingDefinition\Workflow_MailingDefinition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflows\Workflow_MailingDefinition\Workflow_MailingDefinition.Designer.cs">
+      <DependentUpon>Workflow_MailingDefinition.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContentTypes\ContentType_CategoryTemplate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f3bf418e-27c6-4e43-9600-fd07f0807386}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_Category\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3c67f5ff-1294-4100-8eed-3533de282c0f}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_ContactRecipient\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{33db74b5-7568-4c32-84ca-f40bef425612}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_MailingDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{554eb830-e471-4d73-8404-efc2e5962313}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_MailingTemplate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bfb16b10-b322-4c1b-a9d9-8a08e9946928}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_Mailing\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{54d90465-8263-430c-9ce7-8f63ee40aea1}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\ContentType_RecipientsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{69398805-da7f-4275-942d-f2b4f9a8259c}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomActions\CustomAction_GenerateMailing\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{605fcd62-d871-42a9-be17-482c2c4197c3}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomActions\CustomAction_SendMailing\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{936c6485-54d0-4fad-a7a7-370919a39e38}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Web_Mailings_Dependencies\Web_Mailings_Dependencies.feature">
+      <FeatureId>{34f3f860-2590-468f-a0ae-94dca765c131}</FeatureId>
+    </None>
+    <None Include="Features\Site_Mailings\Site_Mailings.feature">
+      <FeatureId>{b1a3c970-d45a-4e20-a23a-8380f3f12cca}</FeatureId>
+    </None>
+    <None Include="Features\Web_Mailings\Web_Mailings.feature">
+      <FeatureId>{6248fb11-6ab4-4de9-bed3-96d2069a783f}</FeatureId>
+    </None>
+    <None Include="Fields\Field_SPMailing_ReplyTo_Adress\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4ad3f549-506f-441f-a1b3-38884c52172e}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_ReplyTo_DisplayName\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1401519c-e99e-47ff-8894-ab0edcf38666}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_From_Adress\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ebdba0fa-4104-4345-9dec-1f60decf0edc}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_From_DisplayName\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c573874-a9f6-4c44-b517-21c6722dc783}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_AutoGenerate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{62ab1bdb-e39a-46be-a68c-985aaced4243}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Recipients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9bf5bc24-ef2e-40a3-bb4e-efd469ab0471}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8d2c72d1-6502-4a58-9f75-bfe136c2158d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_Categories\ListInstance_Categories\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{08829c91-98f5-4f77-a6c2-c1985e350669}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_Categories\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cf20afb1-f73a-4c1e-8364-c2d8b7b0953f}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_CategoryTemplates\ListInstance_CategoryTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f465ceb4-c903-4b13-90b6-e3ee6f8cdc52}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_CategoryTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{869fdd4f-cefc-4781-a479-6a8da5218275}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_ContactRecipients\ListInstance_ContactRecipients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bf0fe3d4-45a4-4275-ab69-a192967f6222}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_ContactRecipients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2d77cecf-b490-49e2-8fc9-a8fa7a06c91d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_MailingDefinitions\ListInstance_MailingDefinitions\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{98df4761-2fb1-4606-b490-a8a6a200b01f}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_MailingDefinitions\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8984021a-5b53-48c9-85ab-16a0ded3f30c}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_Mailings\ListInstance_Mailings\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d53e330f-07dd-44b2-91ea-3d5a1bd8c75d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_Mailings\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{13d8472e-4f8b-4147-9a7b-c674120238db}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_MailingTemplates\ListInstance_MailingTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{03841f1e-2c9b-438b-a953-5380ad031316}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_MailingTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a328845a-bef5-470e-bae6-4b78b592f7c8}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_RecipientsLists\ListInstance_RecipientsLists\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e82328df-b1e2-4cae-8b8b-753e67f373bb}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ListDefinition_RecipientsLists\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{addadf71-dd3f-41d8-be72-b4682c04d4e3}</SharePointProjectItemId>
+    </None>
+    <None Include="Modules\Module_CategoryTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc6f95bb-cd3b-4be7-8194-205e82ba887d}</SharePointProjectItemId>
+    </None>
+    <None Include="Modules\Module_MailingTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c6e5d99-2b61-46eb-b8b4-64314dce46a4}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{3cfefb31-a725-4205-898e-0016ed8c35ba}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Fields\Field_SPMailing_ViewFields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7bc8ce2c-6480-4b82-a30a-d69c2078b340}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_PeopleAndGroupsRecipients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c15d80e-4bec-4125-b1a5-aaf8428c356c}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_DaysOffset\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f543ccb0-9608-4a8f-b549-d6fd7870b2d5}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Footer\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c4a83d39-58bf-43b8-973f-57d4be4595e1}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Header\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb700cc2-20d2-4b5b-85bd-28aef42137b9}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Log\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fe7517b2-52a3-4827-8c8c-d7d36a028af1}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_MailBody\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1f0200a9-4107-42e0-a0c8-f712c5f99d79}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_MailSubject\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{74d79e0c-5220-4dc6-9f4b-aeade200a545}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Sent\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{09d2bd93-d77f-4d5d-ba1c-e14b177664d1}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Label\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0c39bc99-f859-41d9-adee-2cfc9cf1a9ac}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Query\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0b25d0ce-0b06-4f42-9c35-806882f48214}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Type\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a72c1268-99c4-45f0-bb0a-68fb286bdf51}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_Url\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e5b6796-b1a8-4fee-81a6-a623db8d22e9}</SharePointProjectItemId>
+    </None>
+    <None Include="Fields\Field_SPMailing_GenerationUser\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6a673525-2324-4e40-917f-192b4a88b9bb}</SharePointProjectItemId>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c138fc81-22b4-418f-a2ec-80f9050fefdc}</SharePointProjectItemId>
+    </None>
+    <None Include="Workflows\Workflow_MailingDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{88deb5d4-a794-407b-95d0-88e0bba13d77}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentTypes\ContentType_CategoryTemplate\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\ContentType_Category\Elements.xml" />
+    <Content Include="ContentTypes\ContentType_ContactRecipient\Elements.xml" />
+    <Content Include="ContentTypes\ContentType_MailingDefinition\Elements.xml" />
+    <Content Include="ContentTypes\ContentType_MailingTemplate\Elements.xml" />
+    <Content Include="ContentTypes\ContentType_Mailing\Elements.xml" />
+    <Content Include="ContentTypes\ContentType_RecipientsList\Elements.xml" />
+    <Content Include="CustomActions\CustomAction_GenerateMailing\Elements.xml" />
+    <Content Include="CustomActions\CustomAction_SendMailing\Elements.xml" />
+    <Content Include="Features\Web_Mailings_Dependencies\Web_Mailings_Dependencies.Template.xml">
+      <DependentUpon>Web_Mailings_Dependencies.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Site_Mailings\Site_Mailings.Template.xml">
+      <DependentUpon>Site_Mailings.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Web_Mailings\Web_Mailings.Template.xml">
+      <DependentUpon>Web_Mailings.feature</DependentUpon>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_ReplyTo_Adress\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_ReplyTo_DisplayName\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_From_Adress\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_From_DisplayName\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_AutoGenerate\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_Recipients\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_ViewFields\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_PeopleAndGroupsRecipients\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_DaysOffset\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Footer\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Header\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Log\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_MailBody\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_MailSubject\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Sent\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Label\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Query\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Type\Elements.xml" />
+    <Content Include="Fields\Field_SPMailing_Url\Elements.xml" />
+    <Content Include="Layouts\Winwise.SPMailing\GenerateMailing.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\Winwise.SPMailing\SendMailing.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Lists\ListDefinition_Categories\Elements.xml" />
+    <Content Include="Lists\ListDefinition_Categories\ListInstance_Categories\Elements.xml" />
+    <Content Include="Lists\ListDefinition_Categories\Schema.xml" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\EditDlg.htm" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\Elements.xml" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\FileDlg.htm" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\ListInstance_CategoryTemplates\Elements.xml" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\Repair.aspx" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\Schema.xml" />
+    <Content Include="Lists\ListDefinition_CategoryTemplates\Upload.aspx" />
+    <Content Include="Lists\ListDefinition_ContactRecipients\Elements.xml" />
+    <Content Include="Lists\ListDefinition_ContactRecipients\ListInstance_ContactRecipients\Elements.xml" />
+    <Content Include="Lists\ListDefinition_ContactRecipients\Schema.xml" />
+    <Content Include="Lists\ListDefinition_MailingDefinitions\Elements.xml" />
+    <Content Include="Lists\ListDefinition_MailingDefinitions\ListInstance_MailingDefinitions\Elements.xml" />
+    <Content Include="Lists\ListDefinition_MailingDefinitions\Schema.xml" />
+    <Content Include="Lists\ListDefinition_Mailings\Elements.xml" />
+    <Content Include="Lists\ListDefinition_Mailings\ListInstance_Mailings\Elements.xml" />
+    <Content Include="Lists\ListDefinition_Mailings\Schema.xml" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\EditDlg.htm" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\Elements.xml" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\FileDlg.htm" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\ListInstance_MailingTemplates\Elements.xml" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\Repair.aspx" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\Schema.xml" />
+    <Content Include="Lists\ListDefinition_MailingTemplates\Upload.aspx" />
+    <Content Include="Lists\ListDefinition_RecipientsLists\Elements.xml" />
+    <Content Include="Lists\ListDefinition_RecipientsLists\ListInstance_RecipientsLists\Elements.xml" />
+    <Content Include="Lists\ListDefinition_RecipientsLists\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\Field_SPMailing_GenerationUser\Elements.xml" />
+    <Content Include="Modules\Module_CategoryTemplates\SampleArticles.xslt" />
+    <Content Include="Modules\Module_CategoryTemplates\SampleAnnouncements.xslt" />
+    <Content Include="Modules\Module_CategoryTemplates\Elements.xml" />
+    <Content Include="Modules\Module_CategoryTemplates\SampleLinks.xslt" />
+    <Content Include="Modules\Module_MailingTemplates\Elements.xml" />
+    <Content Include="Modules\Module_MailingTemplates\SampleNewsletter.htm" />
+    <Content Include="Workflows\Workflow_MailingDefinition\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Winwise.SPMailing.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Winwise.SPMailing.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\Winwise.SPMailing.fr-fr.resx" />
+    <EmbeddedResource Include="Workflows\Workflow_MailingDefinition\Workflow_MailingDefinition.rules">
+      <DependentUpon>Workflow_MailingDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

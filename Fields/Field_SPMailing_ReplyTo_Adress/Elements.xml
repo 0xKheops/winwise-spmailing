@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Text"
+         DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Title;"
+         Description="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Description;"
+         Required="FALSE"
+         EnforceUniqueValues="FALSE"
+         Indexed="FALSE"
+         MaxLength="255"
+         Group="SPMailing"
+         ID="{E3D0F43E-CE3C-4108-BA4C-AEBE583DC065}"
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}"
+         StaticName="SPMailing_ReplyTo_Adress"
+         Name="SPMailing_ReplyTo_Adress"
+         Customization=""  />
+</Elements>

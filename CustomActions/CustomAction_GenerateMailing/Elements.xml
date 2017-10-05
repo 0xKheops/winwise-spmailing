@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="SPMailing_GenerateMailing"
+                ImageUrl="/_layouts/images/REFRESH.GIF"
+                Location="CommandUI.Ribbon.DisplayForm"
+                RegistrationId="10004"
+                RegistrationType="List"
+                RequireSiteAdministrator="false"
+                Rights="ApproveItems">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Tabs._children">
+          <Tab
+            Id="Ribbon.SPMailing"
+            Title="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_Tab_Title;"
+            Description="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_Tab_Description;"
+            Sequence="501">
+            <Scaling
+              Id="Ribbon.SPMailing.Scaling">
+              <MaxSize
+                Id="Ribbon.SPMailing.MaxSize"
+                GroupId="Ribbon.SPMailing.Generation"
+                Size="OneLargeTwoMedium"/>
+              <Scale
+                Id="Ribbon.SPMailing.Scaling.CustomTabScaling"
+                GroupId="Ribbon.SPMailing.Generation"
+                Size="OneLargeTwoMedium" />
+            </Scaling>
+            <Groups Id="Ribbon.SPMailing.Groups">
+              <Group
+                Id="Ribbon.SPMailing.Generation"
+                Description="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_Group_Description;"
+                Title="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_Group_Title;"
+                Sequence="52"
+                Template="Ribbon.Templates.CustomTemplateExample">
+                <Controls Id="Ribbon.SPMailing.Generation.Controls">
+                  <Button
+                    Id="Ribbon.SPMailing.Generation.Generate"
+                    Command="CustomTabExample.HelloWorldCommand"
+                    Sequence="15"
+                    ToolTipDescription="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_ButtonGenerate_Description;"
+                    LabelText="$Resources:Winwise.SPMailing,Ribbon_GenerateMailing_ButtonGenerate_Title;"
+                    TemplateAlias="cust1" Image32by32="/_layouts/images/ribbon_userprofile_32.png"/>
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
+            <Layout
+              Title="OneLargeTwoMedium"
+              LayoutTitle="OneLargeTwoMedium">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust1" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="CustomTabExample.HelloWorldCommand"
+          CommandAction="{SiteUrl}/_layouts/Winwise.SPMailing/GenerateMailing.aspx?ListId={ListId}&amp;ID={ItemId}" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

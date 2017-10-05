@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:Winwise.SPMailing,ListInstance_Mailings_Title;"
+                OnQuickLaunch="TRUE"
+                TemplateType="10005"
+                Url="Lists/Mailings"
+                Description="$Resources:Winwise.SPMailing,ListInstance_Mailings_Description;">
+  </ListInstance>
+</Elements>

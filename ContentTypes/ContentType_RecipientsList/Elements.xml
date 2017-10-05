@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010018115d8d7b6d4b248d198f5cc2aaf8cd"
+               Name="$Resources:Winwise.SPMailing,ContentType_RecipientsList_Name;"
+               Group="SPMailing"
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+      <FieldRef ID="{a3fa41db-8459-465d-b765-da99465dcc86}" Name="SPMailing_PeopleAndGroupsRecipients" DisplayName="$Resources:Winwise.SPMailing,Field_PeopleAndGroupsRecipients_Title;" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

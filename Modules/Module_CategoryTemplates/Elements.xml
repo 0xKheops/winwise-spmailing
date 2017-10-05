@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Module_CategoryTemplates" Url="CategoryTemplates">
+    <File Path="Module_CategoryTemplates\SampleLinks.xslt" Url="SampleLinks.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sample Links" />
+      <Property Name="SPMailing_ViewFields" Value="&lt;FieldRef Name=&quot;URL&quot; /&gt;&lt;FieldRef Name=&quot;Comments&quot; /&gt;&lt;FieldRef Name=&quot;Author&quot; /&gt;" />
+    </File>
+    <File Path="Module_CategoryTemplates\SampleAnnouncements.xslt" Url="SampleAnnouncements.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sample Announcements" />
+      <Property Name="SPMailing_ViewFields" Value="&lt;FieldRef Name='Title' /&gt;&lt;FieldRef Name='Body' /&gt;" />
+    </File>
+    <File Path="Module_CategoryTemplates\SampleArticles.xslt" Url="SampleArticles.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sample Articles" />
+      <Property Name="SPMailing_ViewFields" Value="&lt;FieldRef Name='Title' /&gt;&lt;FieldRef Name='ID' /&gt;&lt;FieldRef Name='FileRef' /&gt;&lt;FieldRef Name='EncodedAbsUrl' /&gt;&lt;FieldRef Name='Comments' /&gt;&lt;FieldRef Name='PublishingRollupImage' /&gt;" />
+    </File>
+  </Module>
+</Elements>

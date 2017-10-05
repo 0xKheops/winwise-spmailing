@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01001aa916bfbf5047b0a0ea1e177d11d885"
+               Name="$Resources:Winwise.SPMailing,ContentType_MailingDefinition_Name;"
+               Group="SPMailing"
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+      <FieldRef ID="{CD01008D-3242-40B5-B9BD-4AABD7D474DE}" Name="SPMailing_From_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_From_Adress_Title;" />
+      <FieldRef ID="{E4DB45C5-8576-411C-AE84-4B6CEF9C864D}" Name="SPMailing_From_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_From_DisplayName_Title;"  />
+      <FieldRef ID="{E3D0F43E-CE3C-4108-BA4C-AEBE583DC065}" Name="SPMailing_ReplyTo_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Title;" />
+      <FieldRef ID="{8A1DAA53-6E83-4FAE-B360-084DCD0756F2}" Name="SPMailing_ReplyTo_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_DisplayName_Title;" />
+      <FieldRef ID="{ca808133-e705-49d0-8e99-e41c835afc44}" Name="SPMailing_MailSubject" DisplayName="$Resources:Winwise.SPMailing,Field_MailSubject_Title;" />
+      <FieldRef ID="{791ec214-371b-4cfa-baa6-522ad9555a16}" Name="SPMailing_Header" DisplayName="$Resources:Winwise.SPMailing,Field_Header_Title;" />
+      <FieldRef ID="{ba93fd94-a566-45cb-8c02-5db8591edd6e}" Name="SPMailing_Footer" DisplayName="$Resources:Winwise.SPMailing,Field_Footer_Title;" />
+      <FieldRef ID="{cb17075f-3583-41b5-b650-c6910fd58c21}" Name="SPMailing_GenerationUser" DisplayName="$Resources:Winwise.SPMailing,Field_GenerationUser_Title;" />
+      <FieldRef ID="{b907ac62-55ba-49d5-8f4b-5b56869897c2}" Name="SPMailing_DaysOffset" DisplayName="$Resources:Winwise.SPMailing,Field_DaysOffset_Title;" />
+      <FieldRef ID="{651ED2BD-485A-4B33-8F3B-B024722A2E5C}" Name="SPMailing_AutoGenerate" DisplayName="$Resources:Winwise.SPMailing,Field_AutoGenerate_Title;" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

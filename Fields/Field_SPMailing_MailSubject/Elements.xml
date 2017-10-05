@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Text" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_MailSubject_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_MailSubject_Description;"
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         MaxLength="255" 
+         Group="SPMailing" 
+         ID="{ca808133-e705-49d0-8e99-e41c835afc44}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_MailSubject" 
+         Name="SPMailing_MailSubject" 
+         Customization=""  />
+</Elements>

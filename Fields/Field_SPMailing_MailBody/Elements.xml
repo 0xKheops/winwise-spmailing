@@ -1,0 +1,23 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Note" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_MailBody_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_MailBody_Description;"
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         NumLines="50" 
+         RichText="TRUE" 
+         RichTextMode="FullHtml" 
+         IsolateStyles="TRUE" 
+         AppendOnly="TRUE" 
+         Sortable="FALSE" 
+         Group="SPMailing" 
+         ID="{4acbd4d1-09d0-4a37-8c38-0b72bf73c96c}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_MailBody" 
+         Name="SPMailing_MailBody" 
+         RestrictedMode="TRUE" 
+         UnlimitedLengthInDocumentLibrary="TRUE" 
+         Version="1" 
+         Customization=""  />
+</Elements>

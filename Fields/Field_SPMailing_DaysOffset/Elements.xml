@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Number" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_DaysOffset_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_DaysOffset_Description;"
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         Decimals="0" 
+         Group="SPMailing" 
+         ID="{b907ac62-55ba-49d5-8f4b-5b56869897c2}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_DaysOffset" 
+         Name="SPMailing_DaysOffset" 
+         Customization=""  />
+</Elements>

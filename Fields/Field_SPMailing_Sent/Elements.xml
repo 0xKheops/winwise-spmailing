@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Boolean" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_Sent_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_Sent_Description;"
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         Group="SPMailing" 
+         ID="{b1fd3565-fc9a-4e3e-8ad8-746b4ab75371}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_Sent" 
+         Name="SPMailing_Sent" 
+         Customization="" >
+    <Default>0</Default>
+  </Field>
+</Elements>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Module_MailingTemplates" Url="MailingTemplates">
+    <File Path="Module_MailingTemplates\SampleNewsletter.htm" Url="SampleNewsletter.htm" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sample Newsletter" />
+    </File>
+  </Module>
+</Elements>

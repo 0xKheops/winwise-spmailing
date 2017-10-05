@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="3cfefb31-a725-4205-898e-0016ed8c35ba" solutionId="3cfefb31-a725-4205-898e-0016ed8c35ba" resetWebServer="false" name="Winwise.SPMailing" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="6248fb11-6ab4-4de9-bed3-96d2069a783f" />
+    <featureReference itemId="b1a3c970-d45a-4e20-a23a-8380f3f12cca" />
+    <featureReference itemId="34f3f860-2590-468f-a0ae-94dca765c131" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="8d2c72d1-6502-4a58-9f75-bfe136c2158d" />
+    <projectItemReference itemId="c138fc81-22b4-418f-a2ec-80f9050fefdc" />
+  </projectItems>
+</package>

@@ -1,0 +1,149 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Size="866; 922" AutoSizeMargin="16; 24" AutoSize="False" Location="30; 30" Name="SPMailingDefinition_Generation" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Size="242; 80" AutoSizeMargin="16; 24" AutoSize="False" Location="46; 165" Name="GenerationInitialState">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="GenerationInitialState_Activation" Size="150; 242" Location="336; 148">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="GenerationInitialState_onWorkflowActivated" Size="130; 41" Location="346; 210" />
+						<ActivityDesigner Name="logWorkflowActivated" Size="130; 41" Location="346; 270" />
+						<SetStateDesigner Name="setStateActivity1" Size="130; 41" Location="346; 330" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="280; 102" AutoSizeMargin="16; 24" Location="196; 369" Name="AutomaticGenerationState">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="AutomaticGenerationState_Init" Size="150; 242" Location="204; 400">
+					<StateInitializationDesigner.Designers>
+						<ActivityDesigner Name="logAutomaticGenerationState_Init" Size="130; 41" Location="214; 462" />
+						<CodeDesigner Name="GenerateMailing" Size="130; 41" Location="214; 522" />
+						<SetStateDesigner Name="SetWaitingState" Size="130; 41" Location="214; 582" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="266; 102" AutoSizeMargin="16; 24" Location="600; 369" Name="ManualGenerationState">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="ManualGenerationState_Init" Size="150; 122" Location="608; 400">
+					<StateInitializationDesigner.Designers>
+						<ActivityDesigner Name="logManualGenerationState_Init" Size="130; 41" Location="618; 462" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="ManualGenerationState_ItemChangedEvent" Size="150; 254" Location="608; 424">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="ManualGenerationState_onWorkflowItemChanged" Size="130; 41" Location="618; 486" />
+						<ActivityDesigner Name="logManualGenerationState_ItemChanged" Size="130; 41" Location="618; 546" />
+						<SetStateDesigner Name="SetRoutingState2" Size="130; 53" Location="618; 606" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="190; 80" AutoSizeMargin="16; 24" AutoSize="False" Location="420; 241" Name="GenerationRoutingState">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="GenerationRoutingState_Init" Size="381; 375" Location="428; 272">
+					<StateInitializationDesigner.Designers>
+						<CodeDesigner Name="UpdateWorkflow" Size="130; 41" Location="553; 334" />
+						<IfElseDesigner Name="ifElseActivity3" Size="361; 234" Location="438; 394">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifElseBranchActivity5" Size="150; 134" Location="457; 465">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="SetGenerationState1" Size="130; 53" Location="467; 527" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity6" Size="150; 134" Location="630; 465">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="SetManualState" Size="130; 41" Location="640; 533" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="318; 126" AutoSizeMargin="16; 24" Location="160; 495" Name="AutomaticGenerationWaitingState">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="AutomaticGenerationWaitingState_DelayEvent" Size="150; 254" Location="168; 550">
+					<EventDrivenDesigner.Designers>
+						<DelayDesigner Name="WaitForDelay" Size="130; 41" Location="178; 612" />
+						<ActivityDesigner Name="logAutomaticGenerationWaitingState_DelayElapsed" Size="130; 41" Location="178; 672" />
+						<SetStateDesigner Name="SetGenerationState2" Size="130; 53" Location="178; 732" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Name="AutomaticGenerationWaitingState_ItemChangedEvent" Size="150; 254" Location="168; 574">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="AutomaticGenerationWaitingState_ItemChanged" Size="130; 41" Location="178; 636" />
+						<ActivityDesigner Name="logAutomaticGenerationWaitingState_ItemChanged" Size="130; 41" Location="178; 696" />
+						<SetStateDesigner Name="SetRoutingState1" Size="130; 53" Location="178; 756" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<StateInitializationDesigner Name="AutomaticGenerationWaitingState_Init" Size="150; 122" Location="168; 526">
+					<StateInitializationDesigner.Designers>
+						<ActivityDesigner Name="logAutomaticGenerationWaitingState_Init" Size="130; 41" Location="178; 588" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetActivity="GenerationRoutingState" SetStateName="setStateActivity1" SourceActivity="GenerationInitialState" TargetConnectionIndex="0" SourceStateName="GenerationInitialState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="GenerationInitialState_Activation" SourceConnectionIndex="0" TargetStateName="GenerationRoutingState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="254" Y="206" />
+				<ns0:Point X="515" Y="206" />
+				<ns0:Point X="515" Y="241" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AutomaticGenerationWaitingState" SetStateName="SetWaitingState" SourceActivity="AutomaticGenerationState" TargetConnectionIndex="0" SourceStateName="AutomaticGenerationState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="AutomaticGenerationState_Init" SourceConnectionIndex="0" TargetStateName="AutomaticGenerationWaitingState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="394" Y="410" />
+				<ns0:Point X="487" Y="410" />
+				<ns0:Point X="487" Y="483" />
+				<ns0:Point X="319" Y="483" />
+				<ns0:Point X="319" Y="495" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="GenerationRoutingState" SetStateName="SetRoutingState2" SourceActivity="ManualGenerationState" TargetConnectionIndex="0" SourceStateName="ManualGenerationState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="ManualGenerationState_ItemChangedEvent" SourceConnectionIndex="1" TargetStateName="GenerationRoutingState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="862" Y="434" />
+				<ns0:Point X="875" Y="434" />
+				<ns0:Point X="875" Y="233" />
+				<ns0:Point X="515" Y="233" />
+				<ns0:Point X="515" Y="241" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AutomaticGenerationState" SetStateName="SetGenerationState1" SourceActivity="GenerationRoutingState" TargetConnectionIndex="0" SourceStateName="GenerationRoutingState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="GenerationRoutingState_Init" SourceConnectionIndex="0" TargetStateName="AutomaticGenerationState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="606" Y="282" />
+				<ns0:Point X="616" Y="282" />
+				<ns0:Point X="616" Y="357" />
+				<ns0:Point X="336" Y="357" />
+				<ns0:Point X="336" Y="369" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ManualGenerationState" SetStateName="SetManualState" SourceActivity="GenerationRoutingState" TargetConnectionIndex="0" SourceStateName="GenerationRoutingState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="GenerationRoutingState_Init" SourceConnectionIndex="0" TargetStateName="ManualGenerationState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="606" Y="282" />
+				<ns0:Point X="733" Y="282" />
+				<ns0:Point X="733" Y="369" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AutomaticGenerationState" SetStateName="SetGenerationState2" SourceActivity="AutomaticGenerationWaitingState" TargetConnectionIndex="0" SourceStateName="AutomaticGenerationWaitingState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="AutomaticGenerationWaitingState_DelayEvent" SourceConnectionIndex="0" TargetStateName="AutomaticGenerationState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="435" Y="560" />
+				<ns0:Point X="488" Y="560" />
+				<ns0:Point X="488" Y="361" />
+				<ns0:Point X="336" Y="361" />
+				<ns0:Point X="336" Y="369" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="GenerationRoutingState" SetStateName="SetRoutingState1" SourceActivity="AutomaticGenerationWaitingState" TargetConnectionIndex="0" SourceStateName="AutomaticGenerationWaitingState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="AutomaticGenerationWaitingState_ItemChangedEvent" SourceConnectionIndex="1" TargetStateName="GenerationRoutingState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="474" Y="584" />
+				<ns0:Point X="875" Y="584" />
+				<ns0:Point X="875" Y="233" />
+				<ns0:Point X="515" Y="233" />
+				<ns0:Point X="515" Y="241" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+</StateMachineWorkflowDesigner>

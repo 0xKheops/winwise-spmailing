@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Categories" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Categories" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100996ea1e0b135420e92fda083dcb4bde5" Name="$Resources:Winwise.SPMailing,ContentType_Category_Name;" Group="SPMailing" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{f330b6d9-ddd0-42e4-8dc5-7149e8966574}" Name="SPMailing_Label" DisplayName="$Resources:Winwise.SPMailing,Field_Label_Title;" />
+          <FieldRef ID="{68cc8631-6945-4e36-92f9-5d6146f0d451}" Name="SPMailing_Query" DisplayName="$Resources:Winwise.SPMailing,Field_Query_Title;" />
+          <FieldRef ID="{91e460f8-7b39-4ae7-848e-f7264fc5345e}" Name="SPMailing_Type" DisplayName="$Resources:Winwise.SPMailing,Field_Type_Title;" />
+          <FieldRef ID="{7270e400-190a-4929-a9b4-047a18c13de8}" Name="SPMailing_Url" DisplayName="$Resources:Winwise.SPMailing,Field_Url_Title;" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_Label_Title;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{f330b6d9-ddd0-42e4-8dc5-7149e8966574}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Label" Name="SPMailing_Label" Customization="" Description="$Resources:Winwise.SPMailing,Field_Label_Description;" />
+      <Field Type="Note" DisplayName="$Resources:Winwise.SPMailing,Field_Query_Title;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" UnlimitedLengthInDocumentLibrary="TRUE" NumLines="6" RichText="FALSE" Sortable="FALSE" Group="SPMailing" ID="{68cc8631-6945-4e36-92f9-5d6146f0d451}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Query" Name="SPMailing_Query" Customization="" Description="$Resources:Winwise.SPMailing,Field_Query_Description;" />
+      <Field Type="Choice" DisplayName="$Resources:Winwise.SPMailing,Field_Type_Title;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="SPMailing" ID="{91e460f8-7b39-4ae7-848e-f7264fc5345e}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Type" Name="SPMailing_Type" Customization="" Description="$Resources:Winwise.SPMailing,Field_Type_Description;">
+    <Default>List</Default>
+    <CHOICES>
+      <CHOICE>List</CHOICE>
+      <CHOICE>Site</CHOICE>
+    </CHOICES>
+  </Field>
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_Url_Title;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{7270e400-190a-4929-a9b4-047a18c13de8}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Url" Name="SPMailing_Url" Customization="" Description="$Resources:Winwise.SPMailing,Field_Url_Description;" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

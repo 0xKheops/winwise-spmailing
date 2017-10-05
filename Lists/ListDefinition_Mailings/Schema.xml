@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="SPMailing_Mailings" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Winwise.SPMailing-ListDefinition_Mailings" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100ebe441e1fc904c76ba36594db66ffa1b" Name="$Resources:Winwise.SPMailing,ContentType_Mailing_Name;" Group="SPMailing" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{CD01008D-3242-40B5-B9BD-4AABD7D474DE}" Name="SPMailing_From_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_From_Adress_Title;" />
+          <FieldRef ID="{E4DB45C5-8576-411C-AE84-4B6CEF9C864D}" Name="SPMailing_From_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_From_DisplayName_Title;"  />
+          <FieldRef ID="{E3D0F43E-CE3C-4108-BA4C-AEBE583DC065}" Name="SPMailing_ReplyTo_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Title;" />
+          <FieldRef ID="{8A1DAA53-6E83-4FAE-B360-084DCD0756F2}" Name="SPMailing_ReplyTo_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_DisplayName_Title;" />
+          <FieldRef ID="{35831CB4-007F-4F1F-B04C-6BD3B8D1FF01}" Name="SPMailing_Recipients" DisplayName="$Resources:Winwise.SPMailing,Field_Recipients_Title;" />
+          <FieldRef ID="{ca808133-e705-49d0-8e99-e41c835afc44}" Name="SPMailing_MailSubject" DisplayName="$Resources:Winwise.SPMailing,Field_MailSubject_Title;" />
+          <FieldRef ID="{4acbd4d1-09d0-4a37-8c38-0b72bf73c96c}" Name="SPMailing_MailBody" DisplayName="$Resources:Winwise.SPMailing,Field_MailBody_Title;" />
+          <FieldRef ID="{b1fd3565-fc9a-4e3e-8ad8-746b4ab75371}" Name="SPMailing_Sent" DisplayName="$Resources:Winwise.SPMailing,Field_Sent_Title;" />
+          <FieldRef ID="{82f5fa2d-36a8-4492-b644-cb882516cbc6}" Name="SPMailing_Log" DisplayName="$Resources:Winwise.SPMailing,Field_Log_Title;" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_From_Adress_Title;" Description="$Resources:Winwise.SPMailing,Field_From_Adress_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{CD01008D-3242-40B5-B9BD-4AABD7D474DE}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_From_Adress" Name="SPMailing_From_Adress" Customization=""  />
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_From_DisplayName_Title;" Description="$Resources:Winwise.SPMailing,Field_From_DisplayName_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{E4DB45C5-8576-411C-AE84-4B6CEF9C864D}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_From_DisplayName" Name="SPMailing_From_DisplayName" Customization=""  />
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Title;" Description="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{E3D0F43E-CE3C-4108-BA4C-AEBE583DC065}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_ReplyTo_Adress" Name="SPMailing_ReplyTo_Adress" Customization=""  />
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_DisplayName_Title;" Description="$Resources:Winwise.SPMailing,Field_ReplyTo_DisplayName_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{8A1DAA53-6E83-4FAE-B360-084DCD0756F2}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_ReplyTo_DisplayName" Name="SPMailing_ReplyTo_DisplayName" Customization=""  />
+      <Field Type="Note" DisplayName="$Resources:Winwise.SPMailing,Field_Recipients_Title;" Description="$Resources:Winwise.SPMailing,Field_Recipients_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" UnlimitedLengthInDocumentLibrary="TRUE" NumLines="6" RichText="FALSE" Sortable="FALSE" Group="SPMailing" ID="{35831CB4-007F-4F1F-B04C-6BD3B8D1FF01}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Recipients" Name="SPMailing_Recipients" Customization=""  />
+      <Field Type="Note" DisplayName="$Resources:Winwise.SPMailing,Field_Log_Title;" Description="$Resources:Winwise.SPMailing,Field_Log_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" UnlimitedLengthInDocumentLibrary="TRUE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" Group="SPMailing" ID="{82f5fa2d-36a8-4492-b644-cb882516cbc6}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Log" Name="SPMailing_Log" Customization="" />
+      <Field Type="Note" DisplayName="$Resources:Winwise.SPMailing,Field_MailBody_Title;" Description="$Resources:Winwise.SPMailing,Field_MailBody_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="50" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" AppendOnly="TRUE" Sortable="FALSE" Group="SPMailing" ID="{4acbd4d1-09d0-4a37-8c38-0b72bf73c96c}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_MailBody" Name="SPMailing_MailBody" RestrictedMode="TRUE" UnlimitedLengthInDocumentLibrary="TRUE" Version="1" Customization="" />
+      <Field Type="Text" DisplayName="$Resources:Winwise.SPMailing,Field_MailSubject_Title;" Description="$Resources:Winwise.SPMailing,Field_MailSubject_Description;" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="SPMailing" ID="{ca808133-e705-49d0-8e99-e41c835afc44}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_MailSubject" Name="SPMailing_MailSubject" Customization="" />
+      <Field Type="Boolean" DisplayName="$Resources:Winwise.SPMailing,Field_Sent_Title;" Description="$Resources:Winwise.SPMailing,Field_Sent_Description;" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="SPMailing" ID="{b1fd3565-fc9a-4e3e-8ad8-746b4ab75371}" SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" StaticName="SPMailing_Sent" Name="SPMailing_Sent" Customization="">
+        <Default>0</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

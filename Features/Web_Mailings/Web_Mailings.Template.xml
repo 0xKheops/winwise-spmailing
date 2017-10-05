@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Version="1.0.0.0">
+  <ActivationDependencies>
+    <ActivationDependency FeatureId="2b90aa20-341b-445c-9822-f4ecae864a20" />
+  </ActivationDependencies>
+</Feature>

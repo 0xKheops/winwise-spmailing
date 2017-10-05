@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100ebe441e1fc904c76ba36594db66ffa1b"
+               Name="$Resources:Winwise.SPMailing,ContentType_Mailing_Name;"
+               Group="SPMailing"
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+      <FieldRef ID="{CD01008D-3242-40B5-B9BD-4AABD7D474DE}" Name="SPMailing_From_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_From_Adress_Title;" />
+      <FieldRef ID="{E4DB45C5-8576-411C-AE84-4B6CEF9C864D}" Name="SPMailing_From_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_From_DisplayName_Title;"  />
+      <FieldRef ID="{E3D0F43E-CE3C-4108-BA4C-AEBE583DC065}" Name="SPMailing_ReplyTo_Adress" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_Adress_Title;" />
+      <FieldRef ID="{8A1DAA53-6E83-4FAE-B360-084DCD0756F2}" Name="SPMailing_ReplyTo_DisplayName" DisplayName="$Resources:Winwise.SPMailing,Field_ReplyTo_DisplayName_Title;" />
+      <FieldRef ID="{35831CB4-007F-4F1F-B04C-6BD3B8D1FF01}" Name="SPMailing_Recipients" DisplayName="$Resources:Winwise.SPMailing,Field_Recipients_Title;" />
+      <FieldRef ID="{ca808133-e705-49d0-8e99-e41c835afc44}" Name="SPMailing_MailSubject" DisplayName="$Resources:Winwise.SPMailing,Field_MailSubject_Title;" />
+      <FieldRef ID="{4acbd4d1-09d0-4a37-8c38-0b72bf73c96c}" Name="SPMailing_MailBody" DisplayName="$Resources:Winwise.SPMailing,Field_MailBody_Title;" />
+      <FieldRef ID="{b1fd3565-fc9a-4e3e-8ad8-746b4ab75371}" Name="SPMailing_Sent" DisplayName="$Resources:Winwise.SPMailing,Field_Sent_Title;" />
+      <FieldRef ID="{82f5fa2d-36a8-4492-b644-cb882516cbc6}" Name="SPMailing_Log" DisplayName="$Resources:Winwise.SPMailing,Field_Log_Title;" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

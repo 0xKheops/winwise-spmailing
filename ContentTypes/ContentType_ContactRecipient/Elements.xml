@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Contact (0x0106) -->
+  <ContentType ID="0x010600d24dc5476bb04fa0b4978c1655d7ea02"
+               Name="$Resources:Winwise.SPMailing,ContentType_ContactRecipient_Name;"
+               Group="SPMailing"
+               Description=""
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+    </FieldRefs>
+  </ContentType>
+</Elements>

@@ -1,0 +1,22 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Choice" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_Type_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_Type_Description;"
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Indexed="FALSE" 
+         Format="Dropdown" 
+         FillInChoice="FALSE" 
+         Group="SPMailing" 
+         ID="{91e460f8-7b39-4ae7-848e-f7264fc5345e}" 
+         SourceID="{3761e308-4b83-4548-a052-9da2c61e5da9}" 
+         StaticName="SPMailing_Type" 
+         Name="SPMailing_Type" 
+         Customization="" >
+    <Default>List</Default>
+    <CHOICES>
+      <CHOICE>List</CHOICE>
+      <CHOICE>Site</CHOICE>
+    </CHOICES>
+  </Field>
+</Elements>

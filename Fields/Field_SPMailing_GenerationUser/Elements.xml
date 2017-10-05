@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="User" 
+         DisplayName="$Resources:Winwise.SPMailing,Field_GenerationUser_Title;" 
+         Description="$Resources:Winwise.SPMailing,Field_GenerationUser_Description;"
+         List="UserInfo" 
+         Required="FALSE" 
+         ShowField="Title" 
+         UserSelectionMode="PeopleOnly" 
+         UserSelectionScope="0" 
+         Group="SPMailing" 
+         ID="{cb17075f-3583-41b5-b650-c6910fd58c21}" 
+         SourceID="{7e5bd9d9-d570-4af5-be27-a5a172c3ea85}" 
+         StaticName="SPMailing_GenerationUser" 
+         Name="SPMailing_GenerationUser"  />
+</Elements>

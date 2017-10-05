@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Document (0x0101) -->
+  <ContentType ID="0x010100839245732c0b4d72a54a00241a2e5ab9"
+               Name="$Resources:Winwise.SPMailing,ContentType_MailingTemplate_Name;"
+               Group="SPMailing"
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+    </FieldRefs>
+  </ContentType>
+</Elements>

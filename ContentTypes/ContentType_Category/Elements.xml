@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100996ea1e0b135420e92fda083dcb4bde5"
+               Name="$Resources:Winwise.SPMailing,ContentType_Category_Name;"
+               Group="SPMailing"
+               Inherits="TRUE"
+               Version="0"
+               Hidden="TRUE">
+    <FieldRefs>
+      <FieldRef ID="{f330b6d9-ddd0-42e4-8dc5-7149e8966574}" Name="SPMailing_Label" DisplayName="$Resources:Winwise.SPMailing,Field_Label_Title;" />
+      <FieldRef ID="{68cc8631-6945-4e36-92f9-5d6146f0d451}" Name="SPMailing_Query" DisplayName="$Resources:Winwise.SPMailing,Field_Query_Title;" />
+      <FieldRef ID="{91e460f8-7b39-4ae7-848e-f7264fc5345e}" Name="SPMailing_Type" DisplayName="$Resources:Winwise.SPMailing,Field_Type_Title;" />
+      <FieldRef ID="{7270e400-190a-4929-a9b4-047a18c13de8}" Name="SPMailing_Url" DisplayName="$Resources:Winwise.SPMailing,Field_Url_Title;" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

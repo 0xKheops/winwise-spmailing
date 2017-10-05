@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Assemblies>
+    <Assembly Location="Winwise.SPMailing.dll" DeploymentTarget="GlobalAssemblyCache" >
+      <SafeControls>
+        <!-- Declares a safecontrol entry so this package can be deployed web app per web app (avoids the feature to be available on mysite) -->
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Winwise.SPMailing.WebControls" TypeName="*" Safe="True" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+</Solution>

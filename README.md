@@ -11,12 +11,10 @@ Use an announcement list and a links list as repository for newsletter content :
 
 Define categories, select rendering templates :
 
-technewsdef.png
 ![technewsdef](README/technewsdef.png)
 
 Then generate a newsletter and send it to site users :
 
-technewsmail.png
 ![technewsmail](README/technewsmail.png)
 
 Key features
